@@ -11,6 +11,32 @@
 <script src="se3316-lab1-ssand3.js"></script>
 
 <body>
+    <h1>SE 3316 Lab 1</h1>
+    <div class="popup" , id="popupID">
+        <div class="popupOverlay"></div>
+        <div class="popupContent">
+            <div class="close-button" onclick="closeWindow(event)">&times;</div>
+            <h1>List of Pokemon</h1>
+            <p id="pokeList"></p>
+        </div>
+    </div>
+
+    <div class="search-box">
+        <form action="index.html">
+            <label for="number">Search By Number</label>
+            <input type="text" placeholder="Enter Pokemon Number" name="number" id="nums">
+            <button type="submit" class="submit" onclick="checkNums(event)">Search</button>
+        </form>
+    </div>
+
+    <div class="search-box">
+        <form action="index.html">
+            <label for="name">Search By Name</label>
+            <input type="text" placeholder="Enter Pokemon Name" name="name" id="letters">
+            <button type="submit" class="submit" onclick="checkLetters(event)">Search</button>
+        </form>
+    </div>
+
     <ul>
         <li>
             <img src="pokemon_jpg/1.jpg">
