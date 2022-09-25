@@ -33,3 +33,66 @@ li {
     text-align: center;
     display: inline-block;
 }
+
+input {
+    height: 20px;
+    width: 50%;
+}
+
+.search-box {
+    width: 50%;
+    float: left;
+}
+
+.popup .popupOverlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.popup .popupContent {
+    border-radius: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+    width: 500px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+}
+
+.popup .close-button {
+    position: absolute;
+    background: black;
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 37px;
+    text-align: center;
+    border-radius: 50%;
+    right: 25px;
+    top: 25px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.popup.active .popupContent {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup.active .popupOverlay {
+    display: block;
+}
+
+* {
+    font-family: Arial;
+}
