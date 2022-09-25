@@ -1,0 +1,22 @@
+const pokeArr = [
+    ["Number: 001, Name: Bulbasaur, Ability: Overgrow"],
+    ["Number: 002, Name: Ivysaur, Ability: Overgrow"],
+    ["Number: 003, Name: Venusaur, Ability: Overgrow"],
+    ["Number: 004, Name: Charmander, Ability: Blaze"],
+    ["Number: 005, Name: Charmeleon, Ability: Blaze"],
+    ["Number: 006, Name: Charizard, Ability: Blaze"],
+    ["Number: 007, Name: Squirtle, Ability: Torrent"],
+    ["Number: 008, Name: Wartortle, Ability: Torrent"],
+    ["Number: 009, Name: Blastoise, Ability: Torrent"],
+    ["Number: 010, Name: Caterpie, Ability: Shield Dust"],
+    ["Number: 011, Name: Metapod, Ability: Shed Skin"],
+    ["Number: 012, Name: Butterfree, Ability: Compound Eyes"],
+    ["Number: 013, Name: Weedle, Ability: Shield Dust"],
+    ["Number: 014, Name: Kakuna, Ability: Shed Skin"],
+    ["Number: 015, Name: Beedrill, Ability: Swarm"],
+    ["Number: 016, Name: Pidgey, Ability: Tangled Feet"],
+    ["Number: 017, Name: Pidgeotto, Ability: Tangled Feet"],
+    ["Number: 018, Name: Pidgeot, Ability: Tangled Feet"],
+    ["Number: 019, Name: Rattata, Ability: Guts"],
+    ["Number: 020, Name: Raticate, Ability: Guts"]
+]
