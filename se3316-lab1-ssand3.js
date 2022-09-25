@@ -1,3 +1,68 @@
+function checkNums(event) {
+    var x = document.getElementById('nums').value
+    var check = x.match(/^\d+$/)
+    event.preventDefault()
+    if ((check)) {
+        if ((x <= 0) || (x >= 21)) {
+            alert('Please enter a number between 1 to 20')
+            return false
+        }
+        else {
+            var Arr = []
+            for (let count = 0; count < pokeArr.length; count++) {
+                var pokemonNum = pokeArr[count][0];
+                if (pokemonNum.indexOf(x) >= 0) {
+                    Arr.push([`${pokemonNum}`])
+                }
+            }
+            toggleWindow(Arr)
+            return true
+        }
+    }
+    else {
+        alert('Please enter a number')
+        return false
+    }
+}
+
+function checkLetters(event) {
+    var name = /^[A-Za-z]+$/
+    var y = document.getElementById('letters').value.replace(/\s/g, "")
+    var pokemonName = ""
+    event.preventDefault()
+
+    if (y.length == 0) {
+        alert('Please input a name')
+        return false
+    }
+    else if (y.match(name)) {
+        if (y.length >= 21) {
+            alert('Please enter a pokemon name less than 21 characters')
+            return false
+        }
+        else {
+            var Arr2 = []
+            for (let countX = 0; countX < pokeArr.length; countX++) {
+                for (let countY = 0; countY < pokeArr[countX].length; countY++) {
+                    var pokemonName = pokeArr[countX][countY].toLowerCase()
+                    if (pokemonName.indexOf(y) >= 0) {
+                        var poke = pokeArr[countX][0]
+                        Arr2.push([`${poke}`])
+                        break
+                    }
+                }
+            }
+            toggleWindow(Arr2)
+
+            return true
+        }
+    }
+    else {
+        alert('Please enter letters only');
+        return false
+    }
+}
+
 const pokeArr = [
     ["Number: 001, Name: Bulbasaur, Ability: Overgrow"],
     ["Number: 002, Name: Ivysaur, Ability: Overgrow"],
