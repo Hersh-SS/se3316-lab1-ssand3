@@ -63,6 +63,22 @@ function checkLetters(event) {
     }
 }
 
+function toggleWindow(pokeArr2) {
+    document.getElementById('popupID').classList.toggle("active");
+    var size = pokeArr2.length;
+    var z = document.getElementById('pokeList');
+    if (pokeArr2.length >= 6) {
+        size = 5;
+    }
+    for (let count = 0; count < size; count++) {
+        z.innerHTML = z.innerHTML + pokeArr2[count] + "<br />" + "<br />";
+    }
+}
+
+function closeWindow(event) {
+    document.getElementById('popupID').classList.toggle("active");
+    window.location.reload();
+}
 const pokeArr = [
     ["Number: 001, Name: Bulbasaur, Ability: Overgrow"],
     ["Number: 002, Name: Ivysaur, Ability: Overgrow"],
