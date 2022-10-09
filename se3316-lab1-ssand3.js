@@ -96,6 +96,37 @@ newDiv.style.left = "-22px";
 newDiv.style.marginBottom = "100px";
 var newList = document.createElement('ul')
 
+function handlePokemonDom(i) {
+    var num = fullPokeArr[i][0]
+    var name = fullPokeArr[i][1]
+    var type = fullPokeArr[i][2]
+    var img = fullPokeArr[i][3]
+    letterArr.push([num, name, type, img])
+
+    var newListItem = document.createElement('li')
+
+    var image = document.createElement('img')
+    image.src = fullPokeArr[i][5]
+
+    var number = document.createElement('h4')
+    var numberText = document.createTextNode(fullPokeArr[i][0])
+    number.appendChild(numberText)
+
+    var name = document.createElement('h4')
+    var nameText = document.createTextNode(fullPokeArr[i][1])
+    name.appendChild(nameText)
+
+    var ability = document.createElement('h4')
+    var abilityText = document.createTextNode(fullPokeArr[i][3])
+    ability.appendChild(abilityText)
+
+    newListItem.appendChild(image)
+    newListItem.appendChild(number)
+    newListItem.appendChild(name)
+    newListItem.appendChild(ability)
+    newList.append(newListItem)
+}
+
 const pokeArr = [
     ["Number: 001, Name: Bulbasaur, Ability: Overgrow"],
     ["Number: 002, Name: Ivysaur, Ability: Overgrow"],
