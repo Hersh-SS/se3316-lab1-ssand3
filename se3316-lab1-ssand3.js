@@ -79,6 +79,23 @@ function closeWindow(event) {
     document.getElementById('popupID').classList.toggle("active");
     window.location.reload();
 }
+
+var letterArr = []
+var numArr = []
+
+var parentDiv = document.getElementById('ul-1')
+var newDiv = document.createElement('div')
+newDiv.style.backgroundColor = "#90E4C1";
+newDiv.style.position = "relative"; 
+newDiv.style.borderWidth = "10px";
+newDiv.style.width = "90%";
+newDiv.style.height = "100%";
+newDiv.style.borderRadius = "25px";
+newDiv.style.top = "45px";
+newDiv.style.left = "-22px";
+newDiv.style.marginBottom = "100px";
+var newList = document.createElement('ul')
+
 const pokeArr = [
     ["Number: 001, Name: Bulbasaur, Ability: Overgrow"],
     ["Number: 002, Name: Ivysaur, Ability: Overgrow"],
