@@ -21,19 +21,19 @@
         </div>
     </div>
 
-    <div class="search-box">
-        <form action="index.html">
+    <div class="search-box" id="numberDiv">
+        <form action="index.html" method="get">
             <label for="number">Search By Number</label>
-            <input type="text" placeholder="Enter Pokemon Number" name="number" id="nums">
-            <button type="submit" class="submit" onclick="checkNums(event)">Search</button>
+            <input type="text" onkeyup="addToDomUsingNumber(event)" placeholder="Enter Pokemon Number" name="number" id="nums">
+            <button type="submit" class="submit" id="submitByNumber" onclick="checkNums(event)">Search</button>
         </form>
     </div>
 
-    <div class="search-box">
-        <form action="index.html">
+    <div class="search-box" id="nameDiv">
+        <form action="index.html" method="get">
             <label for="name">Search By Name</label>
-            <input type="text" placeholder="Enter Pokemon Name" name="name" id="letters">
-            <button type="submit" class="submit" onclick="checkLetters(event)">Search</button>
+            <input type="text" onkeyup="addToDomUsingLetters(event)" placeholder="Enter Pokemon Name" name="name" id="letters">
+            <button type="submit" class="submit" id="submitByName" onclick="checkLetters(event)">Search</button>
         </form>
     </div>
 
