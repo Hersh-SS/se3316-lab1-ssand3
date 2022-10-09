@@ -152,6 +152,26 @@ function addToDomUsingLetters(event) {
     parentDiv.insertBefore(newDiv, document.getElementsByClassName('li-pokemon')[0])
 }
 
+function addToDomUsingNumber(event) {
+    event.preventDefault()
+    var x = document.getElementById('nums').value
+    var numbers = (/^\d+$/)
+    newList.innerHTML = ''
+
+    if (x.match(numbers)) {
+        for (let i = 0; i < fullPokeArr.length; i++) {
+            var temp = fullPokeArr[i][0]
+            if (temp.indexOf(x) > -1) {
+                handlePokemonDom(i)
+            }
+        }
+
+    }
+
+    newDiv.appendChild(newList)
+    parentDiv.insertBefore(newDiv, document.getElementsByClassName('li-pokemon')[0])
+}
+
 const pokeArr = [
     ["Number: 001, Name: Bulbasaur, Ability: Overgrow"],
     ["Number: 002, Name: Ivysaur, Ability: Overgrow"],
