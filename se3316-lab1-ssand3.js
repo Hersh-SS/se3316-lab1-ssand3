@@ -127,6 +127,31 @@ function handlePokemonDom(i) {
     newList.append(newListItem)
 }
 
+function addToDomUsingLetters(event) {
+    event.preventDefault()
+    var letters = /^[A-Za-z]+$/
+    var x = document.getElementById('letters').value.replace(/\s/g, "")
+    newList.innerHTML = ''
+
+    if (x.match(letters)) {
+        for (let i = 0; i < fullPokeArr.length; i++) {
+            for (let j = 0; j < fullPokeArr[i].length; j++) {
+                if (j == 2) {
+                    j += 1
+                }
+                var temp = fullPokeArr[i][j].toLowerCase()
+                if (temp.indexOf(x) > -1) {
+                    handlePokemonDom(i)
+                    break
+                }
+            }
+        }
+    }
+
+    newDiv.appendChild(newList)
+    parentDiv.insertBefore(newDiv, document.getElementsByClassName('li-pokemon')[0])
+}
+
 const pokeArr = [
     ["Number: 001, Name: Bulbasaur, Ability: Overgrow"],
     ["Number: 002, Name: Ivysaur, Ability: Overgrow"],
